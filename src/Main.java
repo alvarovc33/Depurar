@@ -6,12 +6,10 @@ public class Main {
                 new Estudiante("Marta", 19, new double[]{9.5, 10.0}),
                 new Estudiante("Carlos", 21, new double[]{}) // Error: sin notas
         };
-        Estudiante[] estudiantes2 = new Estudiante[]{
-        };
 
         System.out.println("Calculando el mejor estudiante...");
-        Estudiante mejor = GestorEstudiantes.encontrarMejorEstudiante(estudiantes2);
-        System.out.println("El mejor estudiante es: " + mejor); // Posible NullPointerException
+        Estudiante mejor = GestorEstudiantes.encontrarMejorEstudiante(estudiantes);
+        System.out.println("El mejor estudiante es: " + mejor.getNombre()); // Posible NullPointerException
 
         System.out.println("Guardando resultados...");
         GestorEstudiantes.guardarResultados(estudiantes, "resultados.txt");
